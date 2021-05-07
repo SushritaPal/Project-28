@@ -12,11 +12,18 @@ class Launcher{
         
     }
     display(){
+        if(this.constraint.bodyA){
         var pointA=this.constraint.bodyA.position;
         var pointB=this.pointB;
         line(pointA.x,pointA.y,pointB.x,pointB.y);
-        fly(){
-            this.launcher.bodyA=null;
         }
+        
+      
+    }
+    fly(){
+        this.constraint.bodyA=null;
+    }
+    attach(body){
+        this.constraint.bodyA=body;
     }
 }
